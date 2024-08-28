@@ -20,14 +20,6 @@ import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Do you want to continue',
-      icon: 'error',
-      confirmButtonText: 'Cool',
-    });
-  }
+export class AppComponent {
   title = 'BIA-Task';
 }
