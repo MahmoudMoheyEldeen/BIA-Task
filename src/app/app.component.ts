@@ -5,6 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import Swal from 'sweetalert2';
 import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { SidebarComponent } from './shared-components/sidebar/sidebar.component';
+import { HeaderComponent } from './shared-components/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
     MatDividerModule,
     TranslocoDirective,
     TranslocoPipe,
+    SidebarComponent,
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
