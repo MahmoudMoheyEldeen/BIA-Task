@@ -4,8 +4,8 @@ export const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('../app/main-content/main-content.module').then(
-        (m) => m.MainContentModule
+      import('../app/works-effects/works-effects.module').then(
+        (m) => m.WorksEffectsModule
       ),
   },
 ];
