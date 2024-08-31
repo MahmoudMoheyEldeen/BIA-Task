@@ -5,7 +5,7 @@ import {
   TranslocoModule,
   TranslocoPipe,
 } from '@jsverse/transloco';
-
+import Swal from 'sweetalert2';
 import { WorksEffectsRoutingModule } from './works-effects-routing.module';
 
 @NgModule({
