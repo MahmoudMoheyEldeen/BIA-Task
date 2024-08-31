@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import {
+  TranslocoDirective,
+  TranslocoModule,
+  TranslocoPipe,
+} from '@jsverse/transloco';
 
 import { WorksEffectsRoutingModule } from './works-effects-routing.module';
 
@@ -11,6 +15,7 @@ import { WorksEffectsRoutingModule } from './works-effects-routing.module';
     WorksEffectsRoutingModule,
     TranslocoDirective,
     TranslocoPipe,
+    TranslocoModule,
   ],
 })
 export class WorksEffectsModule {}

@@ -1,11 +1,24 @@
 import { Component } from '@angular/core';
-import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { FormsModule } from '@angular/forms';
+import {
+  TranslocoDirective,
+  TranslocoPipe,
+  TranslocoService,
+} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslocoDirective, TranslocoPipe],
+  imports: [TranslocoDirective, TranslocoPipe, FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private _transLoco: TranslocoService) {}
+  selectedLanguage = 'en';
+
+  onLangChange(event: any) {
+    this.selectedLanguage = event.target.value;
+    this._transLoco.setActiveLang(this.selectedLanguage);
+  }
+}

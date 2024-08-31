@@ -8,14 +8,20 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">English <span class="sr-only">(current)</span></a>
+        <!-- <a class="nav-link" href="#">English <span class="sr-only">(current)</span></a> -->
+        <select [ngModel]="selectedLanguage" (change)="onLangChange($event)" class="form-control pl-5"
+          style="height: 2em;" aria-label="Search">
+          <option value="en">english</option>
+          <option value="ar">عربي</option>
+        </select>
       </li>
       <li class="nav-item mx-3 d-flex align-items-center">
         <i class="fa-regular fa-bell"></i>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0 position-relative">
-      <input class="form-control mr-sm-2 pl-5" type="search" placeholder="{{'search'| transloco}}" aria-label="Search">
+      <input class="form-control mr-sm-2 pl-5" type="search" placeholder="{{'ابحث هنا'| transloco}}"
+        aria-label="Search">
       <i class="fa fa-search position-absolute mr-2" style="right: 10px; top: 50%; transform: translateY(-50%); "></i>
     </form>
   </div>
