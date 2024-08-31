@@ -24,6 +24,25 @@
   }
 
   li {
+    text-align: right;
+    cursor: pointer;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: #f2edf5;
+      border-radius: 5px;
+
+      .fa-arrow-left-long {
+        visibility: visible;
+      }
+    }
+
+    .fa-arrow-left-long {
+      visibility: hidden;
+    }
+
     a {
       font-size: 17px;
       color: black;
@@ -31,17 +50,6 @@
       &:hover {
         text-decoration: none;
       }
-    }
-
-    text-align: right;
-    cursor: pointer;
-    padding: 5px 20px;
-    display: flex;
-    justify-content: end;
-
-    &:hover {
-      background-color: #f2edf5;
-      border-radius: 5px;
     }
 
     .icon-container {
