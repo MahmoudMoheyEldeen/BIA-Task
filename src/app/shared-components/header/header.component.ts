@@ -5,6 +5,7 @@ import {
   TranslocoPipe,
   TranslocoService,
 } from '@jsverse/transloco';
+import { LanguageServiceService } from '../../services/language-service.service';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,19 @@ import {
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private _transLoco: TranslocoService) {}
   selectedLanguage = 'ar';
+  constructor(
+    private _transLoco: TranslocoService,
+    private languageService: LanguageServiceService
+  ) {
+    this.languageService.selectedLanguage$.subscribe((lang) => {
+      this.selectedLanguage = lang;
+      this._transLoco.setActiveLang(lang);
+    });
+  }
 
   onLangChange(event: any) {
-    this.selectedLanguage = event.target.value;
-    this._transLoco.setActiveLang(this.selectedLanguage);
+    const selectedLang = event.target.value;
+    this.languageService.setLanguage(selectedLang);
   }
 }

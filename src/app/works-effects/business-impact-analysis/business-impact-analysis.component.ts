@@ -5,6 +5,7 @@ import {
   TranslocoPipe,
 } from '@jsverse/transloco';
 import Swal from 'sweetalert2';
+import { LanguageServiceService } from '../../services/language-service.service';
 
 @Component({
   selector: 'app-business-impact-analysis',
@@ -14,6 +15,14 @@ import Swal from 'sweetalert2';
   styleUrl: './business-impact-analysis.component.scss',
 })
 export class BusinessImpactAnalysisComponent {
+  currentLanguage: string = ''; /// to get observable  object
+
+  constructor(private languageService: LanguageServiceService) {
+    this.languageService.selectedLanguage$.subscribe((lang) => {
+      this.currentLanguage = lang;
+      console.log('from business component', this.currentLanguage);
+    }); /////to get observable  object
+  }
   trySweetalert() {
     Swal.fire('SweetAlert2 is working!');
   }
