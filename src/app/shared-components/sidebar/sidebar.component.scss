@@ -6,11 +6,9 @@
   height: 95vh;
   transition: all 0.8s ease;
 
-  // transform-origin:;
 
 
   &.sidebar-div.collapsed {
-    // width: 50px;
     transform: translateX(220px);
     overflow: hidden;
 
