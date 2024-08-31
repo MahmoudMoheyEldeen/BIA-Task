@@ -15,7 +15,7 @@ import {
 })
 export class HeaderComponent {
   constructor(private _transLoco: TranslocoService) {}
-  selectedLanguage = 'en';
+  selectedLanguage = 'ar';
 
   onLangChange(event: any) {
     this.selectedLanguage = event.target.value;
