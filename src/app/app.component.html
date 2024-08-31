@@ -1,13 +1,13 @@
 <div class="row all-content container-fluid">
   <div class="header-&-maincontent col-lg-10 col-12 mt-2 mb-4  px-2">
-    <div class="">
+    <div class="header" [class.isCollapsed]='isCollapsedApp'>
       <app-header></app-header>
     </div>
-    <div class="main-content mt-2">
+    <div class="main-content mt-2" [class.isCollapsed]='isCollapsedApp'>
       <router-outlet></router-outlet>
     </div>
   </div>
   <div class="sidebar col-lg-2 d-none d-lg-block mt-2 mb-4  px-1">
-    <app-sidebar></app-sidebar>
+    <app-sidebar [isCollapsed]="isCollapsedApp" (isCollapsedChange)="handleSidebarToggle($event)"></app-sidebar>
   </div>
 </div>

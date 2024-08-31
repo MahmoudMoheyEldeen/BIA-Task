@@ -3,4 +3,19 @@
   width: 100vw;
   margin: auto;
   background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+.isCollapsed {
+  // width: 93vw;
+  transform: translateX(100px);
+}
+
+.main-content {
+  transition: all .8s ease-in-out;
+}
+
+.header {
+  transition: all .8s ease-in-out;
+
 }

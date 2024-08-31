@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss',
+  styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  @Input() isCollapsed: boolean = false;
+  @Output() isCollapsedChange: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+    this.isCollapsedChange.emit(this.isCollapsed);
+    console.log(this.isCollapsed); // Test if it works when clicked
+  }
+}

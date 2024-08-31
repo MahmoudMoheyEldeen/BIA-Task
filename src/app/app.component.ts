@@ -22,8 +22,28 @@ import { HeaderComponent } from './shared-components/header/header.component';
     HeaderComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'BIA-Task';
+  isCollapsedApp: boolean = false;
+
+  ngOnInit(): void {
+    this.toggleSidebar();
+  }
+
+  toggleSidebar() {
+    console.log(
+      'Sidebar collapsed state in AppComponent:',
+      this.isCollapsedApp
+    );
+  }
+
+  handleSidebarToggle(isCollapsed: boolean) {
+    this.isCollapsedApp = isCollapsed;
+    console.log(
+      'Data passed from SidebarComponent to AppComponent:',
+      this.isCollapsedApp
+    );
+  }
 }

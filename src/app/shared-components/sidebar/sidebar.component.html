@@ -1,17 +1,16 @@
-<div class="sidebar-div px-3">
+<div class="sidebar-div px-3" [class.collapsed]="isCollapsed">
   <div class="row d-flex justify-content-between logo-div px-3 mb-4">
-    <div class="mt-3 menu-icon">
+    <div class="mt-3 menu-icon" (click)="toggleSidebar()">
       <img src="../../../assets/image/menu-icon.png" alt="">
     </div>
-    <div>
+    <div *ngIf="!isCollapsed">
       <img src="assets/image/logo.png" alt="">
     </div>
-    <div class="line-under-title mt-3" style="width: 100%; height: .2em;background-color: #fcfcfc;">
-
-    </div>
+    <div class="line-under-title mt-3" *ngIf="!isCollapsed"
+      style="width: 100%; height: .2em;background-color: #fcfcfc;"></div>
   </div>
 
-  <ul>
+  <ul *ngIf="!isCollapsed">
     <li>
       <div>
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
@@ -72,9 +71,7 @@
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
       </div>
       <div class="d-flex">
-        <a href="" class="mx-2">
-          بيانات المؤسسة
-        </a>
+        <a href="" class="mx-2">بيانات المؤسسة</a>
         <div class="icon-container">
           <i class="fa-solid fa-database"></i>
         </div>
@@ -129,9 +126,7 @@
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
       </div>
       <div class="d-flex">
-        <a href="" class="mx-2">
-          البلاغات
-        </a>
+        <a href="" class="mx-2">البلاغات</a>
         <div class="icon-container">
           <i class="fa-solid fa-headphones"></i>
         </div>
@@ -142,9 +137,7 @@
         <i class="fa-solid fa-arrow-left-long" style="color: black;"></i>
       </div>
       <div class="d-flex">
-        <a href="" class="mx-2">
-          إدارة المهام
-        </a>
+        <a href="" class="mx-2">إدارة المهام</a>
         <div class="icon-container">
           <i class="fa-brands fa-square-steam"></i>
         </div>
