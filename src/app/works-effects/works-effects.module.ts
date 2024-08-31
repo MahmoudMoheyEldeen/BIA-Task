@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
 
 import { WorksEffectsRoutingModule } from './works-effects-routing.module';
-
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    WorksEffectsRoutingModule
-  ]
+    WorksEffectsRoutingModule,
+    TranslocoDirective,
+    TranslocoPipe,
+  ],
 })
-export class WorksEffectsModule { }
+export class WorksEffectsModule {}

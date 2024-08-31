@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslocoDirective, TranslocoPipe],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
