@@ -1,9 +1,13 @@
 <div class="container-fluid">
   <div class="row go-back-row  px-2">
-    <i class="fa-solid fa-arrow-right-long ml-auto" style="color: black ; font-size: 2em; font-weight: 600;"></i>
+    <i [ngClass]="{
+      'fa-arrow-left-long mr-auto': currentLanguage === 'en',
+      'fa-arrow-right-long ml-auto': currentLanguage === 'ar'
+    }" class="fa-solid " style="color: black ; font-size: 2em; font-weight: 600;"></i>
 
   </div>
-  <div class="row three-bigIcons-row d-flex justify-content-center  px-2 position-relative mb-4">
+  <div class="row three-bigIcons-row d-flex justify-content-center  px-2 position-relative mb-4"
+    [ngStyle]="{ 'direction': currentLanguage==='en' ? 'rtl' : 'ltr' }">
     <div class="lines-between-bigIcons d-none d-lg-flex position-absolute"
       style="right: 27em; top: 35%; transform: translateY(-50%); ">
       <div class="circle">
