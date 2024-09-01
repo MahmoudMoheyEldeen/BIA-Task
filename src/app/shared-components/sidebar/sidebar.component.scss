@@ -9,7 +9,7 @@
 
 
   &.sidebar-div.collapsed {
-    transform: translateX(220px);
+    // transform: translateX(220px);
     overflow: hidden;
 
   }
@@ -28,6 +28,47 @@
       opacity: 0;
       pointer-events: none;
     }
+
+    li {
+      text-align: right;
+      cursor: pointer;
+      padding: 5px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: #f2edf5;
+        border-radius: 5px;
+
+        .fa-arrow-left-long {
+          visibility: visible;
+        }
+      }
+
+      .fa-arrow-left-long {
+        visibility: hidden;
+      }
+
+      a {
+        font-size: 15px;
+        color: black;
+
+        &.english-dir {
+          font-size: 12px; //// translate english
+        }
+
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .icon-container {
+        padding: 2px 5px;
+        border-radius: 2px;
+        background-color: white;
+      }
+    }
   }
 
   .menu-icon {
@@ -39,41 +80,7 @@
     }
   }
 
-  li {
-    text-align: right;
-    cursor: pointer;
-    padding: 5px 20px;
-    display: flex;
-    justify-content: space-between;
 
-    &:hover {
-      background-color: #f2edf5;
-      border-radius: 5px;
-
-      .fa-arrow-left-long {
-        visibility: visible;
-      }
-    }
-
-    .fa-arrow-left-long {
-      visibility: hidden;
-    }
-
-    a {
-      font-size: 17px;
-      color: black;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    .icon-container {
-      padding: 2px 5px;
-      border-radius: 2px;
-      background-color: white;
-    }
-  }
 }
 
 

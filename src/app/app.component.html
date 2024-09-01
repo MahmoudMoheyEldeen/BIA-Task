@@ -1,13 +1,19 @@
 <div class="row all-content container-fluid">
-  <div class="header-&-maincontent col-lg-10 col-12 mt-2 mb-4  px-2">
-    <div class="header" [class.isCollapsed]='isCollapsedApp'>
+  <div class="header-mainContent col-lg-10 col-12 mt-2 mb-4  px-2" [class.header-maincontent]="currentLanguage=='en'"
+    [ngStyle]="{
+    'transform':
+      currentLanguage === 'en' && isCollapsedApp=== true ? 'translateX(80px)' :
+      currentLanguage === 'ar' && isCollapsedApp === true ? 'translateX(80px)' :
+      ''
+  }">
+    <div class="header">
       <app-header></app-header>
     </div>
-    <div class="main-content mt-2" [class.isCollapsed]='isCollapsedApp'>
+    <div class="main-content mt-2">
       <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="sidebar col-lg-2 d-none d-lg-block mt-2 mb-4  px-1">
+  <div class="sidebar col-lg-2 d-none d-lg-block mt-2 mb-4  px-1" [class.change-dir-sidebar]="currentLanguage=='en'">
     <app-sidebar [isCollapsed]="isCollapsedApp" (isCollapsedChange)="handleSidebarToggle($event)"></app-sidebar>
   </div>
 </div>

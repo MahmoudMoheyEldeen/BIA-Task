@@ -11,9 +11,26 @@
   transform: translateX(100px);
 }
 
+.header-maincontent {
+  transform: translateX(250px); ////for translate english
+
+}
+
 .main-content {
   transition: all .8s ease-in-out;
 }
+
+.header-mainContent {
+  transition: all .8s ease-in-out;
+
+}
+
+.change-dir-sidebar {
+  transform: translateX(-1260px); ////for translate english
+
+
+}
+
 
 .header {
   transition: all .8s ease-in-out;
