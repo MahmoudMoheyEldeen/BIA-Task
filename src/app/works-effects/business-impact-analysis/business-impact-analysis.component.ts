@@ -6,11 +6,17 @@ import {
 } from '@jsverse/transloco';
 import Swal from 'sweetalert2';
 import { LanguageServiceService } from '../../services/language-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-business-impact-analysis',
   standalone: true,
-  imports: [TranslocoDirective, TranslocoDirective, TranslocoModule],
+  imports: [
+    TranslocoDirective,
+    TranslocoDirective,
+    TranslocoModule,
+    CommonModule,
+  ],
   templateUrl: './business-impact-analysis.component.html',
   styleUrl: './business-impact-analysis.component.scss',
 })
